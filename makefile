@@ -31,11 +31,13 @@ OBJS = $(patsubst $(SRC)/%.cpp, $(OBJ)/%.o, $(SRCS))
 
 # BUILD_TARGET
 BUILD_UTIL1 = util1
+
 BUILD_TEST1 = test1
 BUILD_TEST2 = test2
 
 # main source
 UTIL1_SRC = $(UTIL)/util1
+
 TEST1_SRC = test1.cpp
 TEST2_SRC = test2.cpp
 
@@ -46,8 +48,8 @@ UTIL1_OBJS = $(patsubst $(UTIL1_SRC)/%.cpp, $(UTIL1_OBJ)/%.o, $(UTIL1_SRCS))
 
 TEST_OBJ = $(OBJ)/test-obj
 TEST1_SRCS = $(wildcard $(TEST)/$(TEST1_SRC))
-TEST2_SRCS = $(wildcard $(TEST)/$(TEST2_SRC))
 TEST1_OBJS = $(patsubst $(TEST)/%.cpp, $(TEST_OBJ)/%.o, $(TEST1_SRCS))
+TEST2_SRCS = $(wildcard $(TEST)/$(TEST2_SRC))
 TEST2_OBJS = $(patsubst $(TEST)/%.cpp, $(TEST_OBJ)/%.o, $(TEST2_SRCS))
 
 
